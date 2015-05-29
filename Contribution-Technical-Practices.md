@@ -2,7 +2,7 @@ Oh-My-Zsh is a community-driven project and contributions are welcome, but it al
 best with a proper setup. Here follow the best practices for setting up a fork and
 getting started for contributing.
 
-### Prerequisites
+## Prerequisites
 
 You will of course need Git and a UNIX terminal. You should be familiar with the basics of
 [contributing on GitHub](https://help.github.com/articles/using-pull-requests).
@@ -14,29 +14,29 @@ version of OMZ. Think about it, it will come around later on.
 The following section explains how to set up your local Oh-My-Zsh install with the proper
 [remote repositories](https://help.github.com/categories/managing-remotes/).
 
-### Setting up
+## Setting up
 
 _From this point on,_ `<name>` _stands for your GitHub username._
 
-* **1.** Fork the original repository (button at the top of
+- **1.** Fork the original repository (button at the top of
 [the repo's page](https://github.com/robbyrussell/oh-my-zsh)).
 
 _This supposes that you have Oh-My-Zsh installed already in `$ZSH` (default:_
 `~/.oh-my-zsh`_) with the origin remote pointing to the original repository._
 
-* **2.** Now make the choice: either we keep it easy and simple, need-to-know basis, or you
+- **2.** Now make the choice: either we keep it easy and simple, need-to-know basis, or you
 take the red pill, and you stay in Wonderland _etc_. Here follows a manichaean dichotomy:
-  * **Blue pill:** auto-upgrade works, and you can send clean PRs; but your fork is not
+  - **Blue pill:** auto-upgrade works, and you can send clean PRs; but your fork is not
   maintained and you are not using your own master branch
-  * **Red pill:** you can send clean PRs, maintain your own fork with changes, use and
+  - **Red pill:** you can send clean PRs, maintain your own fork with changes, use and
   share your master branch; but auto-upgrade will not work
 
-#### Blue pill setup
+### Blue pill setup
 
 _All the following uses_ `<name>` _for the remote name, but you can use something else._
 
-* **3.** Go to your local install directory and add your own repository as a remote
-```zsh
+- **3.** Go to your local install directory and add your own repository as a remote
+```shell
 cd $ZSH
 git remote add <name> git@github.com:<name>/oh-my-zsh.git
 ```
@@ -50,15 +50,15 @@ able to get upgrades, and to work on your pending PRs.
 
 [**Sending PRs**](#blue-pill-prs)
 
-#### Red pill setup
+### Red pill setup
 
-* **3.** Go to your local install directory and rename the origin remote to "upstream"
-```zsh
+- **3.** Go to your local install directory and rename the origin remote to "upstream"
+```shell
 cd $ZSH
 git remote rename origin upstream
 ```
-* **4.** Then set your own repository as the origin remote
-```zsh
+- **4.** Then set your own repository as the origin remote
+```shell
 git remote add origin git@github.com:<name>/oh-my-zsh.git
 ```
 
@@ -80,7 +80,7 @@ able to get upgrades, and to work on your pending PRs.
 
 [**Sending PRs**](#red-pill-prs)
 
-### Pull Requests
+## Pull Requests
 
 _These are technical instructions, please read the_
 [contributing guidelines
@@ -88,18 +88,18 @@ _These are technical instructions, please read the_
 
 _The following uses_ `my-new-pr` _for the branch name, but you can use something else._
 
-#### Blue pill PRs
+### Blue pill PRs
 
-* **1.** Any new PR must start from a clean upstream tree
-```zsh
+- **1.** Any new PR must start from a clean upstream tree
+```shell
 git checkout origin/master
 git checkout -b my-new-pr
 ```
 
 You are now on your dedicated PR branch. Time to commit some changes!
 
-* **2.** Send your commits
-```zsh
+- **2.** Send your commits
+```shell
 git push <name> my-new-pr
 ```
 
@@ -114,16 +114,16 @@ conflicts, and then `git push --force <name> my-new-pr`, in order to keep your P
 
 ### Red pill PRs
 
-* **1.** Any new PR must start from a clean upstream tree
-```zsh
+- **1.** Any new PR must start from a clean upstream tree
+```shell
 git checkout upstream/master
 git checkout -b my-new-pr
 ```
 
 You are now on your dedicated PR branch. Time to commit some changes!
 
-* **2.** Send your commits
-```zsh
+- **2.** Send your commits
+```shell
 git push origin my-new-pr
 ```
 
